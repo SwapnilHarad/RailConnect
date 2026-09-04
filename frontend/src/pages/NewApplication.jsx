@@ -101,7 +101,7 @@ function NewApplication() {
         data.append("document", file);
 
         const response = await axios.post(
-            "http://localhost:5000/api/upload",
+            `${import.meta.env.VITE_API_URL}/api/upload`,
             data
         );
 
@@ -205,7 +205,7 @@ function NewApplication() {
             };
 
             const response = await axios.post(
-                "http://localhost:5000/api/applications",
+                `${import.meta.env.VITE_API_URL}/api/applications`,
                 applicationData
             );
 

@@ -19,7 +19,7 @@ const StaffLogin = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/staff/login",
+        `${import.meta.env.VITE_API_URL}/api/staff/login`,
         {
           method: "POST",
           headers: {

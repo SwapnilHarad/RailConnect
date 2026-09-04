@@ -45,8 +45,7 @@ const StaffApplicationReview = () => {
         }
 
         const response = await fetch(
-          `http://localhost:5000/api/staff/applications/${id}`,
-          {
+ `${import.meta.env.VITE_API_URL}/api/staff/applications/${id}`,          {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -113,8 +112,7 @@ const StaffApplicationReview = () => {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/staff/applications/${application.applicationNumber}/status`,
-        {
+  `${import.meta.env.VITE_API_URL}/api/staff/applications/${application.applicationNumber}/status`,        {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
